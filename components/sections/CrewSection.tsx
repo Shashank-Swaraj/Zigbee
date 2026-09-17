@@ -43,9 +43,9 @@ export async function CrewSection() {
   return (
     <section 
       id="crew" 
-      className="w-full bg-[#08080A] text-[#F4F4F5] pt-14 pb-24 scroll-mt-16 relative overflow-hidden border-t border-zinc-900"
+      className="w-full bg-[#08080A] text-[#F4F4F5] pt-14 pb-32 sm:pb-24 scroll-mt-16 relative overflow-x-clip xl:overflow-hidden border-t border-zinc-900"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-20">
 
         {/* ================================================================= */}
         {/* 1. TOP ZONE: HERO HEADLINE + LEADERSHIP + TORN CORNER NOTE        */}
@@ -204,7 +204,7 @@ export async function CrewSection() {
             <div className="lg:col-span-2 font-caveat text-xl sm:text-2xl text-zinc-300 leading-tight select-none">
               <span>Same curiosity.</span><br />
               <span className="text-white font-bold">More perspective.</span>
-              <svg className="w-10 h-6 text-[#84CC16] mt-1" viewBox="0 0 40 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <svg className="w-10 h-6 text-[#84CC16] mt-1 rotate-45 lg:rotate-0 origin-left transition-transform" viewBox="0 0 40 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M 4,6 Q 20,20 36,12" strokeLinecap="round" />
                 <path d="M 28,12 L 36,12 L 32,6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -241,7 +241,7 @@ export async function CrewSection() {
         {/* ================================================================= */}
         {/* 4. FOOTER & TELEMETRY                                             */}
         {/* ================================================================= */}
-        <div className="pt-12 space-y-12">
+        <div className="pt-6 sm:pt-12 space-y-8 sm:space-y-12">
           
           {/* Taped Index Quote Card */}
           <TapedBottomQuote />

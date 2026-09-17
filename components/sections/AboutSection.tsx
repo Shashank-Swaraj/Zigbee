@@ -209,7 +209,7 @@ export function AboutSection() {
                 </div>
 
                 {/* TIER 3: Bottom Handwritten Sign-off */}
-                <div className="pl-1 pr-1 pb-2 sm:pl-0 sm:pr-0 sm:pb-0 pt-1.5 sm:pt-2 flex items-end justify-between font-caveat text-zinc-200 text-xs min-[400px]:text-sm sm:text-lg select-none">
+                <div className="pl-2 pr-1 pb-3 sm:pl-0 sm:pr-0 sm:pb-0 pt-1.5 sm:pt-2 flex items-end justify-between font-caveat text-zinc-200 text-sm min-[400px]:text-base sm:text-lg select-none">
                   <div>
                     <p className="leading-snug">Unlike Others.</p>
                     <p className="leading-snug pt-0.5">

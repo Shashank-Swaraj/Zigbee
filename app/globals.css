@@ -14,6 +14,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
 
 :root {
   --bg-dark: #0E0E10;

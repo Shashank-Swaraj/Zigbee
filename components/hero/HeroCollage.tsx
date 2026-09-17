@@ -21,7 +21,7 @@ export function HeroCollage() {
 
       {/* 2. LAYER 2 (TOP-CENTER): ESP32 Breadboard Polaroid                 */}
       <div 
-        className="absolute left-20 sm:left-38 top-0 w-[230px] sm:w-[255px] bg-white p-2.5 pb-4 rotate-[3deg] z-20 border border-zinc-200"
+        className="absolute left-5 min-[400px]:left-8 sm:left-38 top-0 w-[190px] min-[400px]:w-[215px] sm:w-[255px] bg-white p-2 sm:p-2.5 pb-3 sm:pb-4 rotate-[3deg] z-20 border border-zinc-200"
         style={{
           boxShadow: "0 20px 30px -10px rgba(0,0,0,0.2), 0 10px 15px -5px rgba(0,0,0,0.1)"
         }}
@@ -29,7 +29,7 @@ export function HeroCollage() {
         {/* Beige Electrical Tape on Corner */}
         <div className="absolute -top-3.5 right-4 w-16 h-6 bg-[#EADFB7] rotate-[14deg] shadow-md z-30"></div>
         
-        <div className="relative w-full h-36 sm:h-40 bg-zinc-900 overflow-hidden border border-zinc-100">
+        <div className="relative w-full h-32 min-[400px]:h-36 sm:h-40 bg-zinc-900 overflow-hidden border border-zinc-100">
           <Image
             unoptimized
             src="/images/hero-esp32.png"
@@ -42,13 +42,13 @@ export function HeroCollage() {
       </div>
 
       {/* Handwritten Annotation for ESP32 + Curled Arrow */}
-      <div className="absolute right-6 sm:right-10 top-0 z-30 font-['Caveat',cursive] text-zinc-900 rotate-[-2deg] pointer-events-none">
+      <div className="absolute right-2 min-[400px]:right-4 sm:right-10 top-0 z-30 font-['Caveat',cursive] text-zinc-900 rotate-[-2deg] pointer-events-none">
         <div className="leading-tight text-left pl-2">
-          <span className="font-bold text-lg sm:text-xl text-white">ESP32 + RC522</span><br />
-          <span className="text-zinc-700 text-sm sm:text-white">WAITING FOR TAG...</span>
+          <span className="font-bold text-base min-[400px]:text-lg sm:text-xl text-white whitespace-nowrap">ESP32 + RC522</span><br />
+          <span className="text-zinc-300 sm:text-white text-xs min-[400px]:text-sm sm:text-sm whitespace-nowrap">WAITING FOR TAG...</span>
         </div>
         {/* Hand-drawn Arrow pointing down-left directly to ESP32 */}
-        <svg className="w-10 h-10 text-white -rotate-12 mt-0.5 stroke-current fill-none" viewBox="0 0 50 50">
+        <svg className="w-9 h-9 sm:w-10 sm:h-10 text-white -rotate-12 mt-0.5 stroke-current fill-none" viewBox="0 0 50 50">
           <path d="M 28,5 Q 58,29 1,19" strokeWidth="2.2" strokeLinecap="round" />
           <path d="M 14,11 L 2,19 L 15,30" strokeWidth="2.2" strokeLinecap="round" />
         </svg>
@@ -56,7 +56,7 @@ export function HeroCollage() {
 
       {/* 3. LAYER 3 (TOP-RIGHT): Yellow Sticky Note                         */}
       <div 
-        className="absolute right-0 sm:right-2 top-24 sm:top-20 w-[125px] sm:w-[140px] bg-[#FFF8A6] p-3 pt-4 rotate-[6deg] z-25 border border-[#EADB72]"
+        className="absolute right-0 sm:right-2 top-26 sm:top-20 w-[120px] min-[400px]:w-[125px] sm:w-[140px] bg-[#FFF8A6] p-2.5 sm:p-3 pt-3.5 sm:pt-4 rotate-[6deg] z-25 border border-[#EADB72]"
         style={{
           boxShadow: "0 10px 15px -3px rgba(0,0,0,0.12), 0 4px 6px -2px rgba(0,0,0,0.05)"
         }}

@@ -48,15 +48,15 @@ export function Hero() {
 
             
             {/* Action Buttons & Handwritten Annotations */}
-            <div className="mt-8 pt-2 flex flex-wrap items-end gap-x-6 gap-y-8 select-none">
+            <div className="mt-8 pt-2 flex flex-col sm:flex-row sm:items-end gap-y-5 sm:gap-x-6 sm:gap-y-8 select-none">
               
               {/* Left Group: Annotation + Orange Taped Button */}
               <div className="flex items-center gap-2">
                 {/* Handwritten Annotation on Left */}
-                <div className="font-caveat text-zinc-300 text-sm leading-tight text-right flex flex-col items-end">
+                <div className="font-caveat text-zinc-200 sm:text-zinc-300 text-[15px] sm:text-sm leading-tight text-right flex flex-col items-end shrink-0">
                   <span>yeah, we go</span>
                   <span className="flex items-center gap-1">
-                    outside too <span className="text-base font-bold text-zinc-200">:)</span>
+                    outside too <span className="text-[17px] sm:text-base font-bold text-zinc-100 sm:text-zinc-200">:)</span>
                   </span>
                   {/* Handwritten arrow pointing right to button */}
                   <svg className="w-8 h-4 text-zinc-400 stroke-current fill-none mt-0.5" viewBox="0 0 32 16">
@@ -82,7 +82,7 @@ export function Hero() {
               </div>
 
               {/* Right Group: Dark Card + Bottom Disclaimer Annotation */}
-              <div className="relative flex flex-col items-center">
+              <div className="relative flex flex-col items-start sm:items-center ml-[88px] sm:ml-0 mb-6 sm:mb-0">
                 {/* Button 2: PEOPLE BEHIND THE SMOKE */}
                 <Link
                   href="/crew"

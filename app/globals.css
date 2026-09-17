@@ -1,26 +1,53 @@
+/* File: app/globals.css */
 @import "tailwindcss";
 
+@theme {
+  --font-sedgwick: var(--font-sedgwick), cursive;
+  --font-marker: var(--font-marker), cursive;
+  --font-caveat: var(--font-caveat), cursive;
+  --font-geist-mono: var(--font-geist-mono), monospace;
+  --font-inter: var(--font-inter), sans-serif;
+  --font-bebas: var(--font-bebas), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-dark: #0E0E10;
+  --bg-surface: #161619;
+  --bg-card: #1A1A1E;
+  --text-primary: #F4F4F5;
+  --text-muted: #9CA3AF;
+  --accent-orange: #FF5200;
+  --accent-orange-hover: #E04800;
+  --border-dark: #27272A;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.font-sedgwick {
+  font-family: var(--font-sedgwick), cursive;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.font-marker {
+  font-family: var(--font-marker), cursive;
+}
+
+.font-caveat,
+[class*="Caveat"] {
+  font-family: var(--font-caveat), cursive;
+}
+
+.font-bebas {
+  font-family: var(--font-bebas), sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  /* Dark workshop grid dot pattern */
+  background-image: 
+    radial-gradient(#27272A 1px, transparent 1px);
+  background-size: 28px 28px;
 }

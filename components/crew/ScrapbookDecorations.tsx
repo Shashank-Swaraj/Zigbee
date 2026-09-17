@@ -34,7 +34,7 @@ export function TapedLabel({ text, tilt = -1.5 }: { text: string; tilt?: number 
 export function TornParchmentNote() {
   return (
     <div 
-      className="relative w-44 sm:w-52 p-5 bg-[#EAE0D0] text-zinc-900 shadow-[0_15px_30px_rgba(0,0,0,0.85)] border border-[#D5C7B0] select-none ml-9"
+      className="relative w-44 sm:w-52 p-5 bg-[#EAE0D0] text-zinc-900 shadow-[0_15px_30px_rgba(0,0,0,0.85)] border border-[#D5C7B0] select-none mx-auto xl:ml-9"
       style={{ transform: "rotate(2deg)" }}
     >
       {/* Top-Left Scotch Tape */}

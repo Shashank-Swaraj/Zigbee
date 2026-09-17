@@ -34,21 +34,21 @@ export function EventsSection() {
             </div>
 
             {/* Main Headline */}
-            <h2 className="mb-0 text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-[1.05]">
+            <h2 className="mb-0 text-3xl min-[400px]:text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-[1.05] break-words">
               UPCOMING <br />
-              <span className="font-sedgwick text-[#84CC16] tracking-normal lowercase text-5xl sm:text-6xl lg:text-7xl font-normal">
+              <span className="font-sedgwick text-[#84CC16] tracking-normal lowercase text-4xl min-[400px]:text-5xl sm:text-6xl lg:text-7xl font-normal">
                 events.
               </span>
             </h2>
 
             {/* Subtitle */}
-            <p className="font-caveat  text-xs sm:text-sm text-zinc-400 leading-relaxed">
-              SOMETHING TELLS ME THIS’LL WORK.
+            <p className="font-caveat text-xs sm:text-sm text-zinc-400 leading-relaxed">
+              SOMETHING TELLS ME THIS&apos;LL WORK.
             </p>
           </div>
 
           {/* Center/Right: Cursive Note & Taped Terminal Card */}
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 self-end lg:self-start">
+          <div className="hidden lg:flex flex-col sm:flex-row items-center sm:items-start gap-8 self-end lg:self-start">
             
             {/* Handwritten note: good events better people :) */}
             <div className="font-caveat text-xl sm:text-2xl text-zinc-300 leading-tight -rotate-3 text-center sm:text-right pt-2 select-none">
@@ -87,7 +87,7 @@ export function EventsSection() {
         {/* ========================================================================= */}
         {/* 2. TWO-CARD DOSSIER GRID (CARD 1: CREAM // CARD 2: DARK TACTICAL)          */}
         {/* ========================================================================= */}
-        <div className="mt-0 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-stretch">
+        <div className="mt-8 sm:mt-10 lg:mt-0 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-stretch">
           
           {/* ----------------------------------------------------------------------- */}
           {/* CARD 01: CREAM TORN PAPER DOSSIER (TALENT-SURGE 2.0 / GREEN THEME)      */}
@@ -108,7 +108,7 @@ export function EventsSection() {
               </div>
 
               {/* Inner Live Content */}
-              <div className="relative p-6 sm:p-9 text-[#18181B] flex flex-col justify-between min-h-[580px] z-10">
+              <div className="relative p-5 pt-8 pb-14 sm:p-7 md:p-9 text-[#18181B] flex flex-col justify-between min-h-0 sm:min-h-[580px] z-10">
                 
                 {/* Top Row: Tag Badge + Handwritten Board Note */}
                 <div className="flex items-start justify-between gap-4">
@@ -133,9 +133,9 @@ export function EventsSection() {
                   <div className="sm:col-span-7 space-y-4">
                     {/* Title */}
                     <div>
-                      <h3 className="font-black text-3xl sm:text-4xl tracking-tight text-[#111114] uppercase leading-[0.95]">
+                      <h3 className="font-black text-2xl min-[400px]:text-3xl sm:text-4xl tracking-tight text-[#111114] uppercase leading-[0.95] break-words">
                         TALENT-<br />
-                        <span className="font-sedgwick text-[#65A30D] lowercase text-4xl sm:text-5xl font-normal">
+                        <span className="font-sedgwick text-[#65A30D] lowercase text-3xl min-[400px]:text-4xl sm:text-5xl font-normal">
                           surge 2.0
                         </span>
                       </h3>
@@ -170,7 +170,7 @@ export function EventsSection() {
 
                   {/* Right Column (Tilted Framed Poster) */}
                   <div className="sm:col-span-5 flex justify-center sm:justify-end">
-                    <div className="relative w-[180px] sm:w-[220px] aspect-[3/4] bg-[#0E0E10] border-0 p-1 shadow-2xl rotate-[3deg] hover:rotate-0 transition-transform duration-300">
+                    <div className="relative w-[150px] min-[400px]:w-[180px] sm:w-[220px] aspect-[3/4] bg-[#0E0E10] border-0 p-1 shadow-2xl rotate-[3deg] hover:rotate-0 transition-transform duration-300">
                       
                       {/* Translucent Scotch Tape on Top */}
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-14 h-5 bg-white/40 border border-white/30 backdrop-blur-xs rotate-[-2deg] z-20 pointer-events-none shadow-xs"></div>
@@ -193,14 +193,14 @@ export function EventsSection() {
                 {/* Bottom Row: Action CTAs + Rubber Stamp */}
                 <div className="space-y-4 pt-4 border-t border-zinc-700/30">
                   {/* Action Buttons Row */}
-                  <div className="flex flex-wrap items-center gap-2.5 font-mono text-xs font-bold">
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 font-mono text-xs font-bold">
                     
                     {/* 1. Register Button */}
                     <a
                       href={event1.registrationUrl || "https://instagram.com/zigbee_ju"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2.5 bg-[#84CC16] hover:bg-[#72b312] text-black font-black uppercase tracking-wider flex items-center gap-1.5 shadow-md transition-colors"
+                      className="px-3.5 py-2 sm:px-4 sm:py-2.5 bg-[#84CC16] hover:bg-[#72b312] text-black font-black uppercase tracking-wider flex items-center gap-1.5 shadow-md transition-colors text-[11px] sm:text-xs"
                     >
                       <span>REGISTER NOW</span>
                       <ArrowUpRight className="w-3.5 h-3.5 stroke-[3]" />
@@ -209,7 +209,7 @@ export function EventsSection() {
                     {/* 2. Download Brochure */}
                     <a
                       href={event1.brochureUrl || "#"}
-                      className="px-3.5 py-2.5 bg-[#18181B] hover:bg-[#222226] text-white border border-zinc-800 uppercase tracking-wider flex items-center gap-1.5 transition-colors"
+                      className="px-3 py-2 sm:px-3.5 sm:py-2.5 bg-[#18181B] hover:bg-[#222226] text-white border border-zinc-800 uppercase tracking-wider flex items-center gap-1.5 transition-colors text-[11px] sm:text-xs"
                     >
                       <Download className="w-3.5 h-3.5" />
                       <span>DOWNLOAD BROCHURE</span>
@@ -220,7 +220,7 @@ export function EventsSection() {
                       href={generateGoogleCalendarUrl(event1)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3.5 py-2.5 bg-[#18181B] hover:bg-[#222226] text-white border border-zinc-800 hover:border-[#84CC16] uppercase tracking-wider flex items-center gap-1.5 transition-colors"
+                      className="px-3 py-2 sm:px-3.5 sm:py-2.5 bg-[#18181B] hover:bg-[#222226] text-white border border-zinc-800 hover:border-[#84CC16] uppercase tracking-wider flex items-center gap-1.5 transition-colors text-[11px] sm:text-xs"
                     >
                       <Calendar className="w-3.5 h-3.5 text-[#84CC16]" />
                       <span>+ GOOGLE CALENDAR</span>
@@ -229,13 +229,13 @@ export function EventsSection() {
                   </div>
 
                   {/* Ephemera Bottom Line: Solder text + Rubber Stamp */}
-                  <div className="flex items-center justify-between pt-1">
+                  <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
                     <div className="font-caveat text-sm sm:text-base text-zinc-800">
                       solder. deploy. repeat. ★
                     </div>
 
                     {event1.stampText && (
-                      <div className="rotate-[-2deg] border-2 border-[#FF5200] text-[#FF5200] px-2.5 py-0.5 font-mono text-[10px] sm:text-xs font-black tracking-wider uppercase bg-[#FF5200]/10 shadow-xs">
+                      <div className="rotate-[-2deg] border-2 border-[#FF5200] text-[#FF5200] px-2.5 py-0.5 font-mono text-[10px] sm:text-xs font-black tracking-wider uppercase bg-[#FF5200]/10 shadow-xs shrink-0">
                         [ {event1.stampText} ]
                       </div>
                     )}
@@ -265,10 +265,10 @@ export function EventsSection() {
               </div>
 
               {/* Tape on Top-Right Corner */}
-              <div className="absolute top-2 right-60 w-16 h-6 bg-white/20 border border-white/20 rotate-[18deg] z-20 pointer-events-none"></div>
+              <div className="absolute top-2 right-8 sm:right-24 lg:right-60 w-16 h-6 bg-white/20 border border-white/20 rotate-[18deg] z-20 pointer-events-none"></div>
 
               {/* Inner Live Content */}
-              <div className="relative p-6 sm:p-9 text-[#F4F4F5] flex flex-col justify-between min-h-[580px] z-10">
+              <div className="relative p-5 pt-8 pb-14 sm:p-7 md:p-9 text-[#F4F4F5] flex flex-col justify-between min-h-0 sm:min-h-[580px] z-10">
                 
                 {/* Top Row: Tag Badge + Handwritten Note */}
                 <div className="flex items-start justify-between gap-4">
@@ -293,9 +293,9 @@ export function EventsSection() {
                   <div className="sm:col-span-7 space-y-4">
                     {/* Title */}
                     <div>
-                      <h3 className="font-black text-3xl sm:text-4xl tracking-tight text-white uppercase leading-[0.95]">
+                      <h3 className="font-black text-2xl min-[400px]:text-3xl sm:text-4xl tracking-tight text-white uppercase leading-[0.95] break-words">
                         AGENTIC <br />
-                        <span className="font-sedgwick text-[#FF5200] lowercase text-4xl sm:text-5xl font-normal">
+                        <span className="font-sedgwick text-[#FF5200] lowercase text-3xl min-[400px]:text-4xl sm:text-5xl font-normal">
                           ai.
                         </span>
                       </h3>
@@ -330,7 +330,7 @@ export function EventsSection() {
 
                   {/* Right Column (Tilted Framed Poster) */}
                   <div className="sm:col-span-5 flex justify-center sm:justify-end">
-                    <div className="relative w-[180px] sm:w-[220px] aspect-[3/4] bg-[#0E0E10] border-0 p-1 shadow-2xl rotate-[-2.5deg] hover:rotate-0 transition-transform duration-300">
+                    <div className="relative w-[150px] min-[400px]:w-[180px] sm:w-[220px] aspect-[3/4] bg-[#0E0E10] border-0 p-1 shadow-2xl rotate-[-2.5deg] hover:rotate-0 transition-transform duration-300">
                       
                       {/* Translucent Scotch Tape on Top */}
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-14 h-5 bg-white/40 border border-white/30 backdrop-blur-xs rotate-[2deg] z-20 pointer-events-none shadow-xs"></div>
@@ -353,14 +353,14 @@ export function EventsSection() {
 
                 {/* Bottom Row: Action CTAs */}
                 <div className="space-y-4 pt-4 border-t border-zinc-800">
-                  <div className="flex flex-wrap items-center gap-2.5 font-mono text-xs font-bold">
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 font-mono text-xs font-bold">
                     
                     {/* 1. Register Button */}
                     <a
                       href={event2.registrationUrl || "https://instagram.com/zigbee_ju"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2.5 bg-[#FF5200] hover:bg-[#e04800] text-white font-black uppercase tracking-wider flex items-center gap-1.5 shadow-md transition-colors"
+                      className="px-3.5 py-2 sm:px-4 sm:py-2.5 bg-[#FF5200] hover:bg-[#e04800] text-white font-black uppercase tracking-wider flex items-center gap-1.5 shadow-md transition-colors text-[11px] sm:text-xs"
                     >
                       <span>REGISTER NOW</span>
                       <ArrowUpRight className="w-3.5 h-3.5 stroke-[3]" />
@@ -369,7 +369,7 @@ export function EventsSection() {
                     {/* 2. Download Brochure */}
                     <a
                       href={event2.brochureUrl || "#"}
-                      className="px-3.5 py-2.5 bg-[#18181B] hover:bg-[#222226] text-white border border-zinc-700 uppercase tracking-wider flex items-center gap-1.5 transition-colors"
+                      className="px-3 py-2 sm:px-3.5 sm:py-2.5 bg-[#18181B] hover:bg-[#222226] text-white border border-zinc-700 uppercase tracking-wider flex items-center gap-1.5 transition-colors text-[11px] sm:text-xs"
                     >
                       <Download className="w-3.5 h-3.5" />
                       <span>DOWNLOAD BROCHURE</span>
@@ -380,7 +380,7 @@ export function EventsSection() {
                       href={generateGoogleCalendarUrl(event2)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3.5 py-2.5 bg-[#18181B] hover:bg-[#222226] text-white border border-zinc-700 hover:border-[#FF5200] uppercase tracking-wider flex items-center gap-1.5 transition-colors"
+                      className="px-3 py-2 sm:px-3.5 sm:py-2.5 bg-[#18181B] hover:bg-[#222226] text-white border border-zinc-700 hover:border-[#FF5200] uppercase tracking-wider flex items-center gap-1.5 transition-colors text-[11px] sm:text-xs"
                     >
                       <Calendar className="w-3.5 h-3.5 text-[#FF5200]" />
                       <span>+ GOOGLE CALENDAR</span>
@@ -398,10 +398,10 @@ export function EventsSection() {
         {/* ========================================================================= */}
         {/* 3. ATMOSPHERIC BOTTOM FOOTER STRIP                                        */}
         {/* ========================================================================= */}
-        <div className="mt-0 pt-4 flex flex-col md:flex-row items-center justify-between gap-8 lg:-ml-4">
+        <div className="mt-8 sm:mt-10 lg:mt-0 pt-4 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 lg:-ml-4">
           
           {/* Left: Framed Lab Photo Taped with Masking Tape */}
-          <div className="relative w-56 sm:w-54 aspect-[16/10] bg-[#161619] p-2 border border-zinc-700 shadow-xl rotate-[-1.5deg]">
+          <div className="relative w-52 sm:w-54 aspect-[16/10] bg-[#161619] p-2 border border-zinc-700 shadow-xl rotate-[-1.5deg]">
             {/* Top-Left Beige Tape */}
             <div className="absolute -top-2.5 -left-3 w-12 h-4 bg-[#EADFB7]/80 rotate-[-20deg] shadow-xs z-20 pointer-events-none"></div>
             {/* Bottom-Right Beige Tape */}
@@ -419,7 +419,7 @@ export function EventsSection() {
           </div>
 
           {/* Center: Handwritten Quote */}
-          <div className="text-center md:text-left space-y-1 -mt-14">
+          <div className="text-center md:text-left space-y-1 mt-2 md:-mt-14">
             <p className="font-caveat text-xl sm:text-2xl text-zinc-300">
               &ldquo;Good things happen outside the simulator.&rdquo;
             </p>
@@ -436,8 +436,8 @@ export function EventsSection() {
               <div className="text-zinc-500">REAL PROGRESS.</div>
             </div>
 
-            <div className="flex items-center gap-3 border-l border-zinc-800 pl-6">
-              <Globe className="w-8 h-8 text-zinc-500 stroke-[1.5]" />
+            <div className="flex items-center gap-3 border-l border-zinc-800 pl-4 sm:pl-6">
+              <Globe className="w-7 h-7 sm:w-8 sm:h-8 text-zinc-500 stroke-[1.5]" />
               <div className="text-[9px] font-bold text-zinc-500 tracking-widest leading-tight">
                 BUILD<br />
                 LEARN<br />

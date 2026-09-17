@@ -43,7 +43,7 @@ export function PolaroidCard({ member, tiltDeg = 0, size = "md" }: PolaroidCardP
       {/* ------------------------------------------------------------------- */}
       <div
         className={`relative bg-[#F2EFEB] shadow-[0_8px_18px_rgba(0,0,0,0.65)] group-hover:shadow-[0_20px_35px_rgba(0,0,0,0.95)] border border-black/10 group-hover:border-[#84CC16]/70 rounded-[2px] transition-all duration-300 ${
-          isSmall ? "w-[114px] sm:w-[126px] p-2 pb-3" : "w-40 sm:w-44 p-3 pb-4"
+          isSmall ? "w-[105px] min-[380px]:w-[114px] sm:w-[126px] p-1.5 min-[380px]:p-2 pb-2.5 sm:pb-3" : "w-[136px] min-[380px]:w-[150px] sm:w-44 p-2.5 min-[380px]:p-3 pb-3.5 sm:pb-4"
         }`}
       >
         {/* Real Masking Tape with tension flex on hover */}

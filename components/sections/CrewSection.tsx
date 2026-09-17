@@ -63,7 +63,7 @@ export async function CrewSection() {
             </div>
 
             {/* Main Headline */}
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-[0.95]">
+            <h2 className="text-3xl min-[400px]:text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-[0.95] break-words">
               SAME<br />
               PEOPLE.<br />
               <span className="text-[#84CC16]">
@@ -95,7 +95,7 @@ export async function CrewSection() {
             </div>
 
             {/* 4 Leadership Polaroids */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5 pt-2 justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-5 pt-2 justify-items-center">
               {roster.leadership.map((leader, index) => {
                 const tilts = [-1, 1, -0.5, 1.5];
                 return (
@@ -110,7 +110,7 @@ export async function CrewSection() {
           </div>
 
           {/* Right Column: Torn Parchment Note */}
-          <div className="xl:col-span-2 flex justify-center xl:justify-end pt-4 xl:pt-0 xl:translate-x-16">
+          <div className="hidden xl:flex xl:col-span-2 justify-center xl:justify-end pt-4 xl:pt-0 xl:translate-x-16">
             <TornParchmentNote />
           </div>
 
@@ -127,15 +127,15 @@ export async function CrewSection() {
             <div className="h-[1px] flex-1 bg-zinc-800/80" />
           </div>
 
-          {/* All 5 Pods — Clean Equal Distribution across full row */}
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:flex xl:items-stretch gap-y-10 xl:gap-y-0 xl:w-[calc(100%+8rem)]">
+          {/* All 5 Pods — Clean Equal Distribution on desktop, responsive grid on smaller screens */}
+          <div className="grid grid-cols-1 min-[520px]:grid-cols-2 lg:grid-cols-3 xl:flex xl:items-stretch gap-y-10 xl:gap-y-0 xl:w-[calc(100%+8rem)]">
             {roster.teams.map((pod, index) => (
               <div 
                 key={pod.id} 
                 className={`space-y-4 px-2 sm:px-3 flex-1 flex flex-col items-center ${
-                  index === 0 ? "-ml-2 sm:-ml-28" : ""
+                  index === 0 ? "xl:-ml-28" : ""
                 } ${
-                  index < roster.teams.length - 1 ? "border-r border-zinc-800/40" : ""
+                  index < roster.teams.length - 1 ? "xl:border-r xl:border-zinc-800/40" : ""
                 }`}
               >
                 {/* Category Header */}
@@ -164,7 +164,7 @@ export async function CrewSection() {
                 {/* Batman scribe under Technical */}
                 {pod.key === "TECHNICAL" && (
                   <div className="pt-2 pl-2 text-left font-caveat text-sm sm:text-base text-zinc-300 select-none w-full">
-                    <div className="flex items-start gap-1 ml-20">
+                    <div className="flex items-start justify-center sm:justify-start gap-1 ml-4 xl:ml-20">
                       <svg className="w-5 h-8 text-[#84CC16] -rotate-12 mt-0.5 flex-shrink-0" viewBox="0 0 24 32" fill="none" stroke="currentColor" strokeWidth="2.5">
                         <path d="M 18,28 Q 6,18 10,4" strokeLinecap="round" />
                         <path d="M 4,10 L 10,4 L 16,10" strokeLinecap="round" strokeLinejoin="round" />

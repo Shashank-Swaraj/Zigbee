@@ -45,13 +45,13 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8 font-mono text-xs font-semibold tracking-widest text-zinc-400 uppercase">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-8 font-mono text-xs font-semibold tracking-widest text-zinc-400 uppercase">
           {navItems.map((item) => (
             <Link
               key={item.index}
               href={item.href}
               onClick={(e) => handleNavClick(item.href, e)}
-              className="hover:text-white transition-colors cursor-pointer"
+              className="hover:text-white transition-colors cursor-pointer py-2"
             >
               <span className="text-zinc-600 mr-1">{item.index}.</span>
               <span>{item.label}</span>
@@ -60,8 +60,8 @@ export function Navbar() {
         </nav>
 
         {/* Right Status & Action */}
-        <div className="hidden sm:flex items-center gap-4 font-mono">
-          <div className="flex items-center gap-2 px-3 py-1 bg-[#1A1A1E] border border-[#2B2B30] rounded-full text-[11px] text-zinc-300 uppercase font-semibold">
+        <div className="hidden sm:flex items-center gap-3 lg:gap-4 font-mono">
+          <div className="hidden lg:flex items-center gap-2 px-3 py-1 bg-[#1A1A1E] border border-[#2B2B30] rounded-full text-[11px] text-zinc-300 uppercase font-semibold">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span>{siteConfig.liveStatus}</span>
           </div>
@@ -70,7 +70,7 @@ export function Navbar() {
             href={siteConfig.links.talentSurge || siteConfig.links.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-[#84CC16] hover:bg-[#65A30D] text-[#0E0E10] font-mono text-xs uppercase tracking-wider font-extrabold shadow-[0_0_15px_rgba(132,204,22,0.3)] transition-all rounded-none"
+            className="flex items-center gap-2 px-3.5 lg:px-4 py-2 bg-[#84CC16] hover:bg-[#65A30D] text-[#0E0E10] font-mono text-xs uppercase tracking-wider font-extrabold shadow-[0_0_15px_rgba(132,204,22,0.3)] transition-all rounded-none"
           >
             <Radio className="w-3.5 h-3.5 stroke-[2.5]" />
             <span>JOIN THE MESH</span>
@@ -80,7 +80,7 @@ export function Navbar() {
         {/* Mobile Hamburger Button */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 text-zinc-400 hover:text-white"
+          className="md:hidden p-2 text-zinc-400 hover:text-white focus:outline-none"
           aria-label="Toggle Menu"
         >
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -90,24 +90,33 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-[#222226] bg-[#0E0E10] px-4 py-6 space-y-4 font-mono">
+        <div className="md:hidden border-t border-[#222226] bg-[#0E0E10] px-4 py-6 space-y-4 font-mono shadow-2xl">
+          {/* Status badge in mobile drawer */}
+          <div className="flex items-center justify-between pb-3 border-b border-zinc-900">
+            <div className="flex items-center gap-2 px-3 py-1 bg-[#1A1A1E] border border-[#2B2B30] rounded-full text-[11px] text-zinc-300 uppercase font-semibold">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>{siteConfig.liveStatus}</span>
+            </div>
+            <span className="text-[10px] text-zinc-500 font-mono uppercase">JU-FET CSE (IoT)</span>
+          </div>
+
           {navItems.map((item) => (
             <Link
               key={item.index}
               href={item.href}
               onClick={(e) => handleNavClick(item.href, e)}
-              className="block text-sm font-semibold tracking-wider text-zinc-300 hover:text-white py-2 border-b border-zinc-900"
+              className="block text-sm font-semibold tracking-wider text-zinc-300 hover:text-white py-2.5 border-b border-zinc-900 active:text-[#84CC16]"
             >
               <span className="text-zinc-600 mr-2">{item.index}.</span>
               {item.label}
             </Link>
           ))}
-          <div className="pt-4">
+          <div className="pt-2">
             <a
               href={siteConfig.links.talentSurge || siteConfig.links.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full py-3 bg-[#84CC16] text-[#0E0E10] text-xs font-extrabold uppercase tracking-wider"
+              className="flex items-center justify-center gap-2 w-full py-3.5 bg-[#84CC16] hover:bg-[#72b312] text-[#0E0E10] text-xs font-extrabold uppercase tracking-wider transition-colors shadow-[0_0_15px_rgba(132,204,22,0.3)]"
             >
               <Radio className="w-4 h-4 stroke-[2.5]" />
               <span>JOIN THE MESH</span>

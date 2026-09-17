@@ -70,7 +70,7 @@ export function HeroCollage() {
 
       {/* 4. LAYER 4 (BOTTOM-RIGHT): Enlarged Group Polaroid */}
       <div 
-        className="absolute right-0 sm:-right-12 bottom-8 sm:bottom-12 w-[290px] sm:w-[340px] md:w-[360px] bg-white p-3 pb-5 rotate-[-2.5deg] z-15 border border-zinc-200"
+        className="absolute right-0 sm:-right-12 bottom-8 sm:bottom-12 w-[290px] sm:w-[340px] md:w-[360px] bg-white p-3 pb-5 rotate-[-2.5deg] z-30 sm:z-15 border border-zinc-200"
         style={{
           boxShadow: "0 25px 35px -5px rgba(0,0,0,0.35), 0 15px 15px -5px rgba(0,0,0,0.15)"
         }}
@@ -93,7 +93,7 @@ export function HeroCollage() {
 
       {/* 5. LAYER 5 (FRONT OVERLAY): Floating Dark Terminal */}
       <div 
-        className="absolute left-14 sm:left-24 bottom-2 sm:bottom-20 w-[215px] sm:w-[240px] bg-[#0E0E11] text-zinc-300 p-3 rounded-none border border-zinc-700/80 z-40 font-mono text-[9.5px] leading-relaxed shadow-2xl rotate-[18deg]"
+        className="absolute left-2 sm:left-24 bottom-4 sm:bottom-20 w-[215px] sm:w-[240px] bg-[#0E0E11] text-zinc-300 p-3 rounded-none border border-zinc-700/80 z-20 sm:z-40 font-mono text-[9.5px] leading-relaxed shadow-2xl rotate-[18deg]"
       >
         <div className="flex items-center gap-1.5 pb-1.5 mb-1.5 border-b border-zinc-800 text-zinc-500">
           <span className="w-2 h-2 rounded-full bg-red-500/80"></span>

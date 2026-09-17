@@ -57,9 +57,9 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${sedgwick.variable} ${permanentMarker.variable} ${geistMono.variable} ${caveat.variable}  ${bebas.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col bg-[#0E0E10] text-[#F4F4F5] font-mono selection:bg-[#FF5200] selection:text-white">
+      <body className="min-h-full w-full overflow-x-hidden flex flex-col bg-[#0E0E10] text-[#F4F4F5] font-mono selection:bg-[#FF5200] selection:text-white">
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 w-full overflow-x-hidden">{children}</main>
       </body>
     </html>
   );

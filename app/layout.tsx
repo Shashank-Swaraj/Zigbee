@@ -40,6 +40,11 @@ const bebas = Bebas_Neue({
 export const metadata: Metadata = {
   title: "ZIGBEE.JU // IoT & Embedded Systems Club",
   description: "Official website for Zigbee IoT & Embedded Systems club at Jain University (JU-FET).",
+  icons: {
+    icon: "/images/Zigbee_logo.png",
+    shortcut: "/images/Zigbee_logo.png",
+    apple: "/images/Zigbee_logo.png",
+  },
 };
 
 export default function RootLayout({

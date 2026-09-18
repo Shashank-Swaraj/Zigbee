@@ -141,9 +141,9 @@ export const crewData: CrewRoster = {
         },
         {
           id: "social-lead-2",
-          name: "Name Surname",
+          name: "Nishant Kumar",
           role: "Social Lead",
-          linkedinUrl: "https://linkedin.com",
+          linkedinUrl: "https://www.linkedin.com/in/nishant-kumar-nayak-9b759b373/",
         },
       ],
     },

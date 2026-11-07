@@ -30,6 +30,10 @@ import marketing2Pic from "@/asset/crew/marketing-2.png";
 import social1Pic from "@/asset/crew/social-1.png";
 import social2Pic from "@/asset/crew/social-2.jpeg";
 
+// Faculty Advisors
+import faculty1Pic from "@/asset/crew/faculty-1.jpg";
+import faculty2Pic from "@/asset/crew/faculty-2.jpg"; // <-- change to .png if your file is PNG
+
 // ---------------------------------------------------------------------------
 // 2. MAP MEMBER IDs TO THEIR IMPORTED PHOTOS
 // ---------------------------------------------------------------------------
@@ -53,6 +57,9 @@ export const crewPhotos: Record<string, StaticImageData> = {
 
   "social-lead-1": social1Pic,
   "social-lead-2": social2Pic,
+
+  "faculty-advisor-1": faculty1Pic,
+  "faculty-advisor-2": faculty2Pic,
 };
 
 /**

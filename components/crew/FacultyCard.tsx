@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { User } from "lucide-react";
 import { FacultyAdvisor } from "@/types/crew";
+import { getCrewPhoto } from "@/lib/crew-images";
 
 interface FacultyCardProps {
   advisor: FacultyAdvisor;
@@ -26,6 +27,8 @@ function LinkedinIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
 }
 
 export function FacultyCard({ advisor, tiltDeg = 0 }: FacultyCardProps) {
+  const privatePhoto = getCrewPhoto(advisor.id);
+
   return (
     <div
       className="relative flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 bg-[#F2EFEB] text-zinc-900 p-4 sm:p-5 shadow-[0_15px_30px_rgba(0,0,0,0.85)] border border-black/10 rounded-[2px] select-none transition-transform duration-300 hover:scale-[1.01] hover:z-20 max-w-lg w-full"
@@ -39,7 +42,15 @@ export function FacultyCard({ advisor, tiltDeg = 0 }: FacultyCardProps) {
 
       {/* Faculty Portrait / Silhouette Box */}
       <div className="relative w-28 h-36 sm:w-32 sm:h-40 bg-[#1B1B1E] flex-shrink-0 flex items-center justify-center overflow-hidden border border-black/10">
-        {advisor.photoUrl ? (
+        {privatePhoto ? (
+          <Image
+            src={privatePhoto}
+            alt={advisor.name}
+            fill
+            placeholder="blur"
+            className="object-cover"
+          />
+        ) : advisor.photoUrl ? (
           <Image
             unoptimized
             src={advisor.photoUrl}

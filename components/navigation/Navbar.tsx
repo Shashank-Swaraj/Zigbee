@@ -25,27 +25,45 @@ export function Navbar() {
 
   return (
     <header className="w-full border-b border-[#222226] bg-[#0E0E10]/95 backdrop-blur sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div className="w-full px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between relative">
         
-        {/* Brand / Logo */}
-        <Link href="/" className="group flex items-center gap-2.5">
-          <div className="w-10 h-10 relative flex items-center justify-center">
+
+        {/* Brand / Logo + University Affiliation */}
+        <div className="flex items-center gap-4">
+          <Link href="/" className="group flex items-center gap-2.5">
+            <div className="w-9 h-9 relative flex items-center justify-center">
+              <Image
+                unoptimized
+                src="/images/Zigbee_logo.png"
+                alt="Zigbee Logo"
+                width={36}
+                height={36}
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform"
+              />
+            </div>
+            <span className="font-mono font-extrabold text-base tracking-widest text-white">
+              {siteConfig.name}
+            </span>
+          </Link>
+
+          {/* Divider */}
+          <div className="h-5 w-[1px] bg-zinc-800" />
+
+          {/* Jain University Logo (Crisp White in Dark Mode) */}
+          <div className="flex items-center opacity-85 hover:opacity-100 transition-opacity">
             <Image
               unoptimized
-              src="/images/Zigbee_logo.png"
-              alt="Zigbee Logo"
-              width={24}
-              height={24}
-              className="w-full h-full object-contain"
+              src="/images/jain-logo.png"
+              alt="Jain University"
+              width={110}
+              height={30}
+              className="h-9 w-auto object-contain brightness-0 invert"
             />
           </div>
-          <span className="font-mono font-extrabold text-base tracking-widest text-white">
-            {siteConfig.name}
-          </span>
-        </Link>
+        </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-4 lg:gap-8 font-mono text-xs font-semibold tracking-widest text-zinc-400 uppercase">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-8 font-mono text-xs font-semibold tracking-widest text-zinc-400 uppercase absolute left-1/2 -translate-x-1/2">
           {navItems.map((item) => (
             <Link
               key={item.index}

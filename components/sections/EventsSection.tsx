@@ -34,8 +34,11 @@ export function EventsSection() {
             </div>
 
             {/* Main Headline */}
-            <h2 className="mb-0 text-3xl min-[400px]:text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-[1.05] break-words">
-              UPCOMING <br />
+            {/* Main Headline */}
+            <h2 className="mb-0 text-3xl min-[400px]:text-4xl sm:text-5xl lg:text-6xl uppercase leading-[1.05] break-words">
+              <span className="font-bebas tracking-wide text-white text-4xl min-[400px]:text-5xl sm:text-6xl lg:text-7xl font-normal">
+                UPCOMING
+              </span> <br />
               <span className="font-sedgwick text-[#84CC16] tracking-normal lowercase text-4xl min-[400px]:text-5xl sm:text-6xl lg:text-7xl font-normal">
                 events.
               </span>

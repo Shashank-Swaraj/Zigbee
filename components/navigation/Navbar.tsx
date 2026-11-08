@@ -91,7 +91,7 @@ export function Navbar() {
             className="flex items-center gap-2 px-3.5 lg:px-4 py-2 bg-[#84CC16] hover:bg-[#65A30D] text-[#0E0E10] font-mono text-xs uppercase tracking-wider font-extrabold shadow-[0_0_15px_rgba(132,204,22,0.3)] transition-all rounded-none"
           >
             <Radio className="w-3.5 h-3.5 stroke-[2.5]" />
-            <span>JOIN THE MESH</span>
+            <span>VIBE CHECK</span>
           </a>
         </div>
 
